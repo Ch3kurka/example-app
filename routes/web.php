@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/admin', function () {
     return view('123');
+});
+Route::get('/', function () {
+    return view('kickMain');
+});
+Route::get('/slider', function () {
+    return view('adminka/admPages/sliderApp');
 });

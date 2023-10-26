@@ -8,8 +8,10 @@
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/file-upload/file-upload-with-preview.min.css" rel="stylesheet" type="text/css">
     <!-- END GLOBAL MANDATORY STYLES -->
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
@@ -54,11 +56,9 @@
             <!-- CONTENT AREA -->
             <div class="row layout-top-spacing">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-12 layout-spacing">
-                    <div class="widget widget-content-area br-4">
-                        <div class="widget-one">
+
                             @yield('content')
-                        </div>
-                    </div>
+
                 </div>
             </div>
 
@@ -108,6 +108,14 @@
 
 <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 
+
 <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+<script src="plugins/file-upload/file-upload-with-preview.min.js"></script>
+<script>
+    //First upload
+    var firstUpload = new FileUploadWithPreview('myFirstImage')
+    //Second upload
+    var secondUpload = new FileUploadWithPreview('mySecondImage')
+</script>
 </body>
 </html>

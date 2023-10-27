@@ -4,37 +4,41 @@
 </div>--}}
 
   <div class="widget widget-content-area br-4">
-                        <div class="widget-one">
+                        <div class="widget-one"></div>
 
-
-   <div class="custom-file-container" data-upload-id="myFirstImage">
+<form action="/" method="POST" id="text" enctype="multipart/form-data">
+ <div class="custom-file-container" data-upload-id="myFirstImage">
     <label>Upload (Single File) <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
     <label class="custom-file-container__custom-file" >
-        <input type="file" class="custom-file-container__custom-file__custom-file-input" accept="image/*">
+        <input type="file" class="custom-file-container__custom-file__custom-file-input" accept="image/*" required>
         <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
         <span class="custom-file-container__custom-file__custom-file-control"></span>
     </label>
+
     <div class="custom-file-container__image-preview"></div>
 
 </div>
-<form>
     <div class="form-group mb-4">
         <label for="formGroupExampleInput">First text</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter first text">
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter first text...">
     </div>
     <div class="form-group mb-4">
         <label for="formGroupExampleInput2">Second text</label>
-        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter second text">
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter second text...">
     </div>
     <div class="form-group mb-4">
         <label for="formGroupExampleInput2">Button text</label>
-        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter button text">
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter button text...">
+    </div>
+    <div class="form-group mb-4">
+        <label for="formGroupExampleInput2">Button link</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter button link...">
     </div>
     <input type="submit" name="time" class="btn btn-primary">
 </form>
 
-                 </div>
-                    </div>
+  </div>
+
 
 
 

@@ -6,7 +6,7 @@
   <div class="widget widget-content-area br-4">
                         <div class="widget-one"></div>
 
-<form action="/" method="POST" id="text" enctype="multipart/form-data">
+{{--<form action="/" method="POST" id="text" enctype="multipart/form-data" Олежа, ты остановился тут, ПОДКЛЮЧЕНИЕ ФОРМЫ>--}}
  <div class="custom-file-container" data-upload-id="myFirstImage">
     <label>Upload (Single File) <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
     <label class="custom-file-container__custom-file" >

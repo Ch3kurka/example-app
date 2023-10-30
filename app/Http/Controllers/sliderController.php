@@ -2,22 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\slidermodel;
+use App\Models\SliderForm;
 use Illuminate\Http\Request;
 
 class sliderController extends Controller
 {
-    //
-}
-public function store(Request $request)
-{
-    $model = new slidermodel;
-    $model->FirstText = $request->input('FirstText');
-    $model->SecondText = $request->input('SecondText');
-    $model->ButtonText = $request->input('Button Text');
-    $model->ButtonLink = $request->input('Button Link');
-    $model->Image = $request->input('Image');
-    $model->save();
 
-    return redirect()->back()->with('success', 'Data has been added successfully');
+    public function store(Request $request)
+    {
+        $SliderForm = new SliderForm;
+        $SliderForm->first_text= $request->input('first_text');
+        $SliderForm->second_text= $request->input('second_text');
+        $SliderForm->button_text= $request->input('button_text');
+        $SliderForm->button_link= $request->input('button_link');
+//        $SliderForm -> file_name = $request -> input('filename');
+
+        $SliderForm->save();
+        return redirect('/slider');
+    }
 }

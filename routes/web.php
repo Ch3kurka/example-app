@@ -1,6 +1,8 @@
 <?php
-
+use App\Http\Controllers\sliderController;
 use Illuminate\Support\Facades\Route;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::view('/admin','123');
 Route::view('/','kickMain');
 Route::view('/slider','adminka/admPages/sliderApp');
+
+Route::post('/sliderform',[sliderController::class, 'store'])->name('slider.form');
+
+

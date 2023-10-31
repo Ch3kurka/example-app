@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::view('/admin','123');
 Route::view('/','kickMain');
 Route::view('/slider','adminka/admPages/sliderApp');
+Route::view('/sliderEdit','adminka/admPages/pagesCont/Slider/sliderEdit');
+
 
 Route::post('/sliderform',[sliderController::class, 'store'])->name('slider.form');
 

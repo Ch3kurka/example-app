@@ -20,7 +20,7 @@ class CreateSliderFormsTable extends Migration
             $table->string('second_text')->nullable();
             $table->string('button_text')->nullable();
             $table->string('button_link')->nullable();
-//            $table->string('filename')->nullable();
+            $table->string('file_name')->nullable();
         });
     }
 

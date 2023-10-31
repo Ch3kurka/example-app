@@ -1,17 +1,12 @@
- {{--   <label for="exampleFormControlFile1">Example file input</label>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-
-</div>--}}
-
   <div class="widget widget-content-area br-4">
                         <div class="widget-one"></div>
 
-      <form action="{{ route('slider.form') }}" method="POST">
+      <form action="{{ route('slider.form') }}" enctype="multipart/form-data" method="POST">
           @csrf
  <div class="custom-file-container" data-upload-id="myFirstImage">
     <label>Upload (Single File) <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
     <label class="custom-file-container__custom-file" >
-        <input type="file" class="custom-file-container__custom-file__custom-file-input" name="filename" accept="image/*">
+        <input type="file" class="custom-file-container__custom-file__custom-file-input" name="file_name" accept="image/*">
         <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
         <span class="custom-file-container__custom-file__custom-file-control"></span>
     </label>
@@ -35,7 +30,7 @@
         <label for="formGroupExampleInput2">Button link</label>
         <input type="text" class="form-control" name="button_link" id="formGroupExampleInput2" placeholder="Enter button link...">
     </div>
-    <input type="submit" name="time" class="btn btn-primary">
+    <input type="submit" name="time" class="btn btn-primary mb-4 mr-2" >
 </form>
 
   </div>

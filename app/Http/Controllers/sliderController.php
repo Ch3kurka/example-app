@@ -22,4 +22,7 @@ class sliderController extends Controller
         return redirect('/sliderEdit');
     }
     public function edit()
+    {
+
+    }
 }

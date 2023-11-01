@@ -22,5 +22,5 @@ Route::view('/sliderEdit','adminka/admPages/pagesCont/Slider/sliderEdit');
 
 
 Route::post('/sliderform',[sliderController::class, 'store'])->name('slider.form');
-
+//Route::get('/sliderEdit',[sliderController::class, 'index']);
 

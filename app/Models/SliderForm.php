@@ -9,5 +9,7 @@ class SliderForm extends Model
 {
 
     public $incrementing = false;
+
     use HasFactory;
+
 }

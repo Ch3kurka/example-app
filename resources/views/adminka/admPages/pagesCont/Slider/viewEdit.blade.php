@@ -16,32 +16,33 @@
     <div class="table-responsive">
         <table class="table table-bordered">
             <thead>
-{{--            @foreach($slider_forms as $data)--}}
+
             <tr>
-                <th class="text-center"></th>
-                <th>#</th>
+                <th class="text-center">#</th>
                 <th>First text</th>
                 <th>Second text</th>
                 <th>Button text</th>
                 <th>Button link</th>
+                <th>Image</th>
                 <th class="text-center">Action</th>
             </tr>
-{{--            @endforeach--}}
+
             </thead>
             <tbody>
-
+            @foreach($slider_forms as $slider_form)
             <tr>
-                <td class="text-center"></td>
-                <td></td>
+                <td class="text-center">{{$slider_form->id}}</td>
+                <td>{{$slider_form->first_text}}</td>
+                <td>{{$slider_form->second_text}}</td>
+                <td>{{$slider_form->button_text}}</td>
+                <td>{{$slider_form->button_link}}</td>
                 <td>
-
+                    <div class="text-center">
+                    <img src="{{asset('/storage/'.$slider_form['file_name'])}}" height="100" width="160" class="img-4">
+                    </div>
                 </td>
-                <td></td>
-                <td>
-
-                </td>
-                <td></td>
                 <td class="text-xl-center">
+
                     <button class="btn btn-danger mb-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -50,6 +51,8 @@
                             </path>
                         </svg>
                     </button>
+
+                    <form>
                     <button class="btn btn-dark mb-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                              viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -67,7 +70,8 @@
                             </line>
                         </svg>
                     </button>
-
+                    </form>
+                    @endforeach
                 </td>
 
             </tr>

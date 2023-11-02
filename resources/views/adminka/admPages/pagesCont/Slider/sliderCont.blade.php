@@ -32,7 +32,6 @@
     </div>
     <input type="submit" name="time" class="btn btn-primary mb-4 mr-2" >
 </form>
-
   </div>
 
 

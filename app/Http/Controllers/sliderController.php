@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\SliderForm;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class sliderController extends Controller
@@ -30,8 +31,14 @@ class sliderController extends Controller
         $slider_forms = SliderForm::all();
         return view('adminka/admPages/pagesCont/Slider/sliderEdit', ['slider_forms' => $slider_forms]);
     }
-    public function destroy($id)
+    public function delete($id)
     {
 
+        $delete = SliderForm::find($id);
+    Storage::disk('public')->delete('images',$delete['file_name']);
+        $delete -> delete();
+        return redirect('/sliderEdit');
     }
+
+
 }

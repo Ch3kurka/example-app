@@ -19,6 +19,8 @@ Route::view('/admin','123');
 Route::view('/','kickMain');
 Route::view('/slider','adminka/admPages/sliderApp');
 Route::view('/sliderEdit','adminka/admPages/pagesCont/Slider/sliderEdit');
+Route::view('/formEditPage','adminka/admPages/pagesCont/Slider/formEditPage');
+
 
 
 Route::post('/sliderform',[sliderController::class, 'store'])->name('slider.form');

@@ -39,6 +39,15 @@ class sliderController extends Controller
         $delete -> delete();
         return redirect('/sliderEdit');
     }
+    public function edit()
+    {
+    return view('');
+    }
+    public function update($id)
+    {
+
+
+    }
 
 
 }

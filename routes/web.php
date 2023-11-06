@@ -26,3 +26,5 @@ Route::view('/formEditPage','adminka/admPages/pagesCont/Slider/formEditPage');
 Route::post('/sliderform',[sliderController::class, 'store'])->name('slider.form');
 Route::get('/sliderEdit',[sliderController::class, 'index']);
 Route::post('/sliderEdit/{delete}',[sliderController::class, 'delete']);
+Route::post('/formEditPage/{edit}',[sliderController::class, 'edit']);
+//Route::put('/formEditPage/{id}',[sliderController::class,'update']);

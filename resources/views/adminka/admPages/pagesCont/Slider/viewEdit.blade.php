@@ -43,7 +43,8 @@
                 </td>
                 <td class="text-xl-center">
                     <div>
-                        <a href="/formEditPage" aria-expanded="false" class="dropdown-toggle">
+                        <form  method="post" action="adminka/admPages/pagesCont/Slider/formEditPage/{{$slider_form->id}}">
+                            @csrf
                             <button class="btn btn-danger mb-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -52,7 +53,7 @@
                             </path>
                             </svg>
                             </button>
-                        </a>
+                        </form>
                     </div>
                     <form method="POST" action="/sliderEdit/{{$slider_form->id}}">
                         @csrf

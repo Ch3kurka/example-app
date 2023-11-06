@@ -39,15 +39,25 @@ class sliderController extends Controller
         $delete -> delete();
         return redirect('/sliderEdit');
     }
-    public function edit()
+    public function edit($id)
     {
-    return view('');
-    }
-    public function update($id)
-    {
+        $edit = SliderForm::find($id);
 
 
+        return view('adminka/admPages/pagesCont/Slider/formEditPage',['edit'=>$edit]);
     }
+
+
+/*    public function update(Request $request, $id)
+    {
+        $edit = SliderForm::find($id);
+        $edit->first_text= $request->input('first_text');
+        $edit->second_text= $request->input('second_text');
+        $edit->button_text= $request->input('button_text');
+        $edit->button_link= $request->input('button_link');
+        $edit -> save();
+        return redirect('/SliderEdit');
+    }*/
 
 
 }

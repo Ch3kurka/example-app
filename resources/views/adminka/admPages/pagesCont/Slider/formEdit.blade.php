@@ -1,10 +1,17 @@
 <div class="widget widget-content-area br-4">
     <div class="widget-one"></div>
-
-    <form action="#" enctype="multipart/form-data" method="POST">
+    <div class="widget-header">
+        <div class="row">
+            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                <h4>Edit your slide</h4>
+            </div>
+        </div>
+    </div>
+    <form enctype="multipart/form-data" method="POST">
         @csrf
+        @method('PUT')
         <div class="custom-file-container" data-upload-id="myFirstImage">
-            <label>Upload (Single File) <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
+            <label>Your file <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
             <label class="custom-file-container__custom-file" >
                 <input type="file" class="custom-file-container__custom-file__custom-file-input" name="file_name" accept="image/*">
                 <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
@@ -16,7 +23,7 @@
         </div>
         <div class="form-group mb-4">
             <label for="formGroupExampleInput" >First text</label>
-            <input type="text" class="form-control" name="first_text" id="formGroupExampleInput" placeholder="Enter first text...">
+            <input type="text" class="form-control" name="first_text" value="{{$edit->first_text}}" id="formGroupExampleInput" placeholder="Enter first text...">
         </div>
         <div class="form-group mb-4">
             <label for="formGroupExampleInput2">Second text</label>

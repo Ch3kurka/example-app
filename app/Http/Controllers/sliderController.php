@@ -41,24 +41,29 @@ class sliderController extends Controller
     }
     public function edit($id)
     {
-        $edit = SliderForm::find($id)->get();
+        $edit = SliderForm::find($id);
 
 
         return view('adminka/admPages/pagesCont/Slider/formEditPage',['edit'=>$edit]);
     }
-
-
+    public function data()
+    {
+        $data = SliderForm::all();
+    return veiw();
+    }
 
     public function update(Request $request, $id)
     {
         $edit = SliderForm::find($id);
-        $edit->first_text= $request->input('first_text');
-        $edit->second_text= $request->input('second_text');
-        $edit->button_text= $request->input('button_text');
-        $edit->button_link= $request->input('button_link');
+        $edit->first_text = $request->input('first_text');
+        $edit->second_text = $request->input('second_text');
+        $edit->button_text = $request->input('button_text');
+        $edit->button_link = $request->input('button_link');
+        if (request()->has('file_name'))
+        {$path = Storage::disk('public')->put('images', $request->file('file_name'));
+        $edit->file_name = $path;}
+
         $edit -> save();
-        return redirect('/SliderEdit');
+        return redirect('/sliderEdit');
     }
-
-
 }

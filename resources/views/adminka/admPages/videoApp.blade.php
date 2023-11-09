@@ -1,1 +1,5 @@
-<h1>hghghfghg</h1>
+@extends('kickMain')
+@section('content')
+    @include('adminka.admPages.pagesCont.Video.videoCont')
+
+@endsection

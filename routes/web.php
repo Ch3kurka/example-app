@@ -20,6 +20,7 @@ Route::view('/','kickMain');
 Route::view('/slider','adminka/admPages/sliderApp');
 Route::view('/sliderEdit','adminka/admPages/pagesCont/Slider/sliderEdit');
 Route::view('/formEditPage','adminka/admPages/pagesCont/Slider/formEditPage');
+Route::view('/video','adminka/admPages/videoApp');
 
 
 
@@ -27,4 +28,5 @@ Route::post('/sliderform',[sliderController::class, 'store'])->name('slider.form
 Route::get('/sliderEdit',[sliderController::class, 'index']);
 Route::post('/sliderEdit/{delete}',[sliderController::class, 'delete']);
 Route::post('/formEditPage/{edit}',[sliderController::class, 'edit']);
+Route::get('/formEditPage/{edit}',[sliderController::class, 'data']);
 Route::put('/formEditPage/{edit}',[sliderController::class,'update']);

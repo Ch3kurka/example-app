@@ -3,7 +3,7 @@
 
       <form action="{{ route('slider.form') }}" enctype="multipart/form-data" method="POST">
           @csrf
- <div class="custom-file-container" data-upload-id="myFirstImage">
+ <div class="custom-file-container" data-upload-id="mySecondImage">
     <label>Upload (Single File) <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
     <label class="custom-file-container__custom-file" >
         <input type="file" class="custom-file-container__custom-file__custom-file-input" name="file_name" accept="image/*">
@@ -33,7 +33,10 @@
     <input type="submit" name="time" class="btn btn-primary mb-4 mr-2" >
 </form>
   </div>
-
+  <script src="{{asset("/plugins/file-upload/file-upload-with-preview.min.js")}}"></script>
+  <script>
+  var firstUpload = new FileUploadWithPreview('mySecondImage')
+  </script>
 
 
 

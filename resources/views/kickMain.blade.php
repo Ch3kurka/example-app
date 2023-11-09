@@ -92,8 +92,8 @@
 <!-- END MAIN CONTAINER -->
 
 <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
-<script src="{{asset("/assets/js/libs/jquery-3.1.1.min.js")}}></script>
-<script src=" {{asset("/bootstrap/js/popper.min.js)")}}></script>
+<script src="{{asset("/assets/js/libs/jquery-3.1.1.min.js")}}"></script>
+<script src="{{asset("/bootstrap/js/popper.min.js)")}}"></script>
 <script src="{{asset("/bootstrap/js/bootstrap.min.js")}}"></script>
 <script src="{{asset("/plugins/perfect-scrollbar/perfect-scrollbar.min.js")}}"></script>
 <script src="{{asset("/assets/js/app.js")}}"></script>
@@ -108,14 +108,5 @@
 
 <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 
-
-<!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-<script src="{{asset("/plugins/file-upload/file-upload-with-preview.min.js")}}"></script>
-<script>
-    //First upload
-    var firstUpload = new FileUploadWithPreview('myFirstImage')
-    //Second upload
-    var secondUpload = new FileUploadWithPreview('mySecondImage')
-</script>
 </body>
 </html>

@@ -30,3 +30,6 @@ Route::post('/sliderEdit/{delete}',[sliderController::class, 'delete']);
 Route::post('/formEditPage/{edit}',[sliderController::class, 'edit']);
 Route::get('/formEditPage/{edit}',[sliderController::class, 'data']);
 Route::put('/formEditPage/{edit}',[sliderController::class,'update']);
+
+
+

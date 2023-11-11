@@ -10,13 +10,15 @@ class videoController extends Controller
 {
 public function store(Request $request)
 {
-  $videoadd = new video;
+    $videoadd = new video;
     $videoadd->first_text= $request->input('first_text');
     $videoadd->second_text= $request->input('second_text');
-    $path = Storage::disk('public')->put('videos', $request->file('file_name'));
-    $videoadd -> file_name = $path;
+    $path = Storage::disk('public')->putFile('public', $request->file('file_path'));
+    $videoadd -> file_path = $path;
+
     $videoadd->save();
     return redirect('/video');
+
 }
 
 public function index()

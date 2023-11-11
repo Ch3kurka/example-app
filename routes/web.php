@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\sliderController;
+use App\Http\Controllers\videoController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -33,3 +34,4 @@ Route::put('/formEditPage/{edit}',[sliderController::class,'update']);
 
 
 
+Route::post('/video', [videoController::class, 'store'])->name('video');

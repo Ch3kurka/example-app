@@ -15,18 +15,19 @@
                 </div>
             </div>
             <div class="widget-content widget-content-area">
-                <form>
+                <form action="{{route('video')}}" method="post" enctype="multipart/form-data">
+                    @csrf
                     <div class="row mb-4">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="First text">
+                            <input type="text"  class="form-control" name="first_text" placeholder="First text">
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Second text">
+                            <input type="text"  class="form-control" name="second_text" placeholder="Second text">
                         </div>
                     </div>
                     <div class="form-group mb-4 mt-3">
                         <label for="exampleFormControlFile1"></label>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        <input type="file" class="form-control-file" name="file_path" id="exampleFormControlFile1">
                     </div>
                     <input type="submit" name="time" class="btn btn-primary">
                 </form>

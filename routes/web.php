@@ -22,6 +22,7 @@ Route::view('/slider','adminka/admPages/sliderApp');
 Route::view('/sliderEdit','adminka/admPages/pagesCont/Slider/sliderEdit');
 Route::view('/formEditPage','adminka/admPages/pagesCont/Slider/formEditPage');
 Route::view('/video','adminka/admPages/videoApp');
+Route::view('/videoEdit', 'adminka/admPages/pagesCont/Video/videoSmpl');
 
 
 
@@ -35,3 +36,5 @@ Route::put('/formEditPage/{edit}',[sliderController::class,'update']);
 
 
 Route::post('/video', [videoController::class, 'store'])->name('video');
+/*Route::post('/videoEdit', [videoController::class, 'index']);
+Route::put('/videoEdit',[sliderController::class,'update']);*/

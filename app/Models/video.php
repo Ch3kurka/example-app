@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class video extends Model
 {
+    protected $fillable = [
+    'first_text',
+    'second_text',
+    'file_path',
+];
     use HasFactory;
 }

@@ -13,7 +13,7 @@ public function store(Request $request)
     $videoadd = new video;
     $videoadd->first_text= $request->input('first_text');
     $videoadd->second_text= $request->input('second_text');
-    $path = Storage::disk('public')->putFile('public', $request->file('file_path'));
+    $path = Storage::disk('public')->putFile('videos', $request->file('file_path'));
     $videoadd -> file_path = $path;
     $videoadd->save();
     return redirect('/videoEdit');
@@ -22,17 +22,22 @@ public function store(Request $request)
 
 public function index()
 {
-   $video = video::find(1);
-   return view('/adminka/admPages/Video/videoSmpl', ['video'=>$video]);
+   $video = video::all()->find(1);
+   return view('/adminka/admPages/pagesCont/Video/videoSmpl', ['video'=>$video]);
+
 }
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        $video = video::find($id)->first();
+        $video = video::find(1);
         $video->first_text = $request->input('first_text');
         $video->second_text = $request->input('second_text');
         if (request()->has('file_path'))
-        {$path = Storage::disk('public')->put('public', $request->file('file_path'));
-            $video->file_name = $path;}
+        {
+
+            $path = Storage::disk('public')->putFile('videos', $request->file('file_path'));
+
+            $video->file_path = $path;
+        }
 
         $video -> save();
         return redirect('/videoEdit');

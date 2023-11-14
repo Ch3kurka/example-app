@@ -15,25 +15,43 @@
                 </div>
             </div>
             <div class="widget-content widget-content-area">
-                <form action="" method="post" enctype="multipart/form-data">
+                <form method="post" action="{{route('videoUpd')}}" enctype="multipart/form-data">
                     @csrf
                     <div class="row mb-4">
                         <div class="col">
-                            <input type="text"  class="form-control"  name="first_text" placeholder="First text">
+
+                            <input type="text"  class="form-control"  name="first_text" value="{{$video->first_text}}" placeholder="First text">
+
                         </div>
                         <div class="col">
-                            <input type="text"  class="form-control" name="second_text" placeholder="Second text">
+                            <input type="text"  class="form-control" name="second_text" value="{{$video->second_text}}" placeholder="Second text">
                         </div>
                     </div>
-                    <div class="form-group mb-4 mt-3">
-                        <label for="exampleFormControlFile1"></label>
-                        <input type="file" class="form-control-file" name="file_path" id="exampleFormControlFile1">
+                    <div class="custom-file-container" data-upload-id="myFirstImage">
+                        <label>Your file <a href="javascript:void(0)" class="custom-file-container__image-clear"
+                                            title="Clear Image">x</a></label>
+                        <label class="custom-file-container__custom-file" >
+                            <input type="file" class="custom-file-container__custom-file__custom-file-input"
+                                   name="file_path" value="" accept="image/*">
+                            <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
+                            <span class="custom-file-container__custom-file__custom-file-control"></span>
+                        </label>
+
+                        <div class="custom-file-container__image-preview"></div>
                     </div>
                     @method('PUT')
                     <input type="submit" name="time" class="btn btn-primary">
                 </form>
-
             </div>
         </div>
     </div>
 </div>
+<script src="{{asset("/plugins/file-upload/file-upload-with-preview.min.js")}}"></script>
+
+<script>
+    let myFirstImage = new FileUploadWithPreview('myFirstImage',
+        {
+            presetFiles: ['{{asset('/storage/'.$video->file_path)}}']
+        }
+    )
+</script>

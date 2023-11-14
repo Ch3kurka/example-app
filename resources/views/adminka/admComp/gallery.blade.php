@@ -10,7 +10,7 @@
     </a>
     <ul class="collapse submenu list-unstyled" id="submenu" data-parent="#accordionExample">
         <li>
-            <a href="javascript:void(0);"> Filter </a>
+            <a href="/gallery"> Categories and Photos </a>
         </li>
     </ul>
 </li>

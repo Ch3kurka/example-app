@@ -17,7 +17,9 @@
 
 
                 <div class="widget-content widget-content-area text-center split-buttons">
-                   <button class="btn btn-outline-primary mb-2">Create a section</button>
+                   <a href="/gallerySection">
+                    <button href="/gallerySection" class="btn btn-outline-primary mb-2">Create a section</button>
+                    </a>
                    <button class="btn btn-outline-info mb-2">Edit a section</button>
                    <button class="btn btn-outline-success mb-2">Create Photo</button>
                    <button class="btn btn-outline-warning mb-2">All Photos</button>

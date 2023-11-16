@@ -24,7 +24,7 @@ Route::view('/formEditPage','adminka/admPages/pagesCont/Slider/formEditPage');
 Route::view('/video','adminka/admPages/videoApp');
 Route::view('/videoEdit', 'adminka/admPages/pagesCont/Video/videoSmpl');
 Route::view('/gallery', 'adminka/admPages/galleryApp');
-
+Route::view('/gallerySection', 'adminka/admPages/pagesCont/Gallery/createS');
 
 
 

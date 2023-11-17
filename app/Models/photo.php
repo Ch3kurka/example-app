@@ -10,7 +10,7 @@ class photo extends Model
     use HasFactory;
     public function photo()
     {
-        return $this->belongsToMany(Photo::class, 'photos_sections',
+        return $this->belongsToMany(section::class, 'photos_sections',
             'photos_id', 'sections_id');
     }
 }

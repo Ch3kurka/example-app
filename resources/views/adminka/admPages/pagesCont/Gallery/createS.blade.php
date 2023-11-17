@@ -1,7 +1,7 @@
 @extends('kickMain')
 
 @section('content')
-
+  @include('adminka.admPages.pagesCont.Gallery.galleryCont')
     <div class="col-lg-12 col-12 layout-spacing">
         <div class="statbox widget box box-shadow">
             <div class="widget-header">
@@ -12,10 +12,12 @@
                 </div>
             </div>
             <div class="widget-content widget-content-area">
-                <form>
+                <form action="{{route('create')}}" enctype="multipart/form-data" method="post">
+                    @csrf
                     <div class="row mb-4">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Your category...">
+                            <input type="text" name="category" class="form-control" placeholder="Your category...">
+
                         </div>
                     </div>
                     <input type="submit" name="time" class="btn btn-primary">

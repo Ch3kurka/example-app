@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\sectionController;
 use App\Http\Controllers\sliderController;
 use App\Http\Controllers\videoController;
 use Illuminate\Support\Facades\Route;
@@ -25,6 +27,7 @@ Route::view('/video','adminka/admPages/videoApp');
 Route::view('/videoEdit', 'adminka/admPages/pagesCont/Video/videoSmpl');
 Route::view('/gallery', 'adminka/admPages/galleryApp');
 Route::view('/gallerySection', 'adminka/admPages/pagesCont/Gallery/createS');
+Route::view('/galleryEdit', 'adminka/admPages/pagesCont/Gallery/editS');
 
 
 
@@ -40,4 +43,5 @@ Route::get('/videoEdit', [videoController::class, 'index']);
 Route::post('/videoEdit',[videoController::class, 'index']);
 Route::put('/videoEdit',[videoController::class,'update'])->name('videoUpd');
 
-
+Route::post('/gallerySection', [sectionController::class, 'store'])->name('create');
+Route::get('/galleryEdit', [sectionController::class, 'index']);

@@ -45,3 +45,5 @@ Route::put('/videoEdit',[videoController::class,'update'])->name('videoUpd');
 
 Route::post('/gallerySection', [sectionController::class, 'store'])->name('create');
 Route::get('/galleryEdit', [sectionController::class, 'index']);
+Route::post('galleryEdit/{delete}', [sectionController::class, 'delete']);
+Route::put('/galleryEdit/{update}',[sectionController::class,'update']);

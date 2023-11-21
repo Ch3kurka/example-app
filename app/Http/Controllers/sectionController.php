@@ -17,7 +17,26 @@ public function store(Request $request)
 
 public function index()
 {
-    $index = section::all();
-    return view('adminka/admPages/pagesCont/Gallery/editS', ['galleryEdit'=>$index]);
+    $show = section::all();
+    return view('adminka/admPages/pagesCont/Gallery/editS', ['show'=>$show]);
+
 }
+public function delete($id)
+{
+
+    $delete = section::find($id);
+
+    $delete -> delete();
+    return redirect('/galleryEdit');
+}
+
+    public function update(Request $req, $id)
+    {
+        $update = section::find($id);
+        $update->category = $req->input('category');
+        $update -> save();
+        return redirect('/galleryEdit');
+    }
+
+
 }

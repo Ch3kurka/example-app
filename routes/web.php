@@ -28,6 +28,8 @@ Route::view('/videoEdit', 'adminka/admPages/pagesCont/Video/videoSmpl');
 Route::view('/gallery', 'adminka/admPages/galleryApp');
 Route::view('/gallerySection', 'adminka/admPages/pagesCont/Gallery/createS');
 Route::view('/galleryEdit', 'adminka/admPages/pagesCont/Gallery/editS');
+Route::view('/galleryPhoto', 'adminka/admPages/pagesCont/Gallery/createPh');
+
 
 
 

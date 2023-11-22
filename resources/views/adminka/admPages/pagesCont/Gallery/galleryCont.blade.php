@@ -1,4 +1,4 @@
-    <div class="col-lg-12 col-12 layout-spacing">
+    <div class="col-lg-10 col-10 layout-spacing">
         <div class="statbox widget box box-shadow">
             <div class="widget-header">
                 <div class="row">
@@ -17,9 +17,12 @@
                     <a href="/galleryEdit">
                    <button class="btn btn-outline-info mb-2">Edit a section</button>
                     </a>
+                    <a href="/galleryPhoto">
                    <button class="btn btn-outline-success mb-2">Create Photo</button>
+                    </a>
+                    <a>
                    <button class="btn btn-outline-warning mb-2">All Photos</button>
-
+                    </a>
                 </div>
             </div>
         </div>

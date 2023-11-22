@@ -2,7 +2,7 @@
 
 @section('content')
   @include('adminka.admPages.pagesCont.Gallery.galleryCont')
-    <div class="col-lg-12 col-12 layout-spacing">
+    <div class="col-lg-10 col-10 layout-spacing">
         <div class="statbox widget box box-shadow">
             <div class="widget-header">
                 <div class="row">

@@ -20,7 +20,7 @@
                     <a href="/galleryPhoto">
                    <button class="btn btn-outline-success mb-2">Create Photo</button>
                     </a>
-                    <a>
+                    <a href="/allphotos">
                    <button class="btn btn-outline-warning mb-2">All Photos</button>
                     </a>
                 </div>

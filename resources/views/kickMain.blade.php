@@ -18,6 +18,10 @@
     <!-- END GLOBAL MANDATORY STYLES -->
     <link rel="stylesheet" type="text/css" href="{{asset("plugins/select2/select2.min.css")}}">
     <link href="{{asset("assets/css/elements/miscellaneous.css")}}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{{asset("assets/css/forms/theme-checkbox-radio.css")}}">
+    <link href="{{asset("plugins/lightbox/photoswipe.css")}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset("plugins/lightbox/default-skin/default-skin.css")}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset("plugins/lightbox/custom-photswipe.css")}}" rel="stylesheet" type="text/css" />
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
 

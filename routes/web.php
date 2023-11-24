@@ -17,7 +17,7 @@ use App\Http\Controllers\videoController;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
 });
 
@@ -25,7 +25,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+require __DIR__.'/auth.php';*/
 
 
 
@@ -52,7 +52,8 @@ Route::view('/gallery', 'adminka/admPages/galleryApp');
 Route::view('/gallerySection', 'adminka/admPages/pagesCont/Gallery/createS');
 Route::view('/galleryEdit', 'adminka/admPages/pagesCont/Gallery/editS');
 Route::view('/galleryPhoto', 'adminka/admPages/pagesCont/Gallery/createPh');
-Route::view('/allphotos', 'adminka/admPages/pagesCont/Gallery/allPhoto');
+Route::view('/photos', 'adminka/admPages/pagesCont/Gallery/allPhoto');
+Route::view('/editphcat', 'adminka/admPages/pagesCont/Gallery/editPhS');
 
 
 
@@ -75,8 +76,9 @@ Route::put('/galleryEdit/{update}', [sectionController::class, 'update']);
 
 Route::get('/galleryPhoto', [photoController::class, 'index']);
 Route::post('/galleryPhoto', [photoController::class, 'createPhoto'])->name('createPhoto');
+Route::get('/photos',[photoController::class, 'showPhoto']);
+Route::get('/editphcat', [photoController::class, 'showCategories']);
 
+/*Auth::routes();
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');*/

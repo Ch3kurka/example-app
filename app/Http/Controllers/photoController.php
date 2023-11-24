@@ -15,6 +15,18 @@ class photoController extends Controller
         return view('adminka/admPages/pagesCont/Gallery/createPh', ['show'=>$show]);
 
     }
+    public function showPhoto()
+    {
+        $display = photo::all();
+        return view('adminka/admPages/pagesCont/Gallery/allPhoto', ['display'=>$display]);
+
+    }
+    public function showCategories()
+    {
+        $cate = section::all();
+        return view('adminka/admPages/pagesCont/Gallery/editPhS', ['cate'=>$cate]);
+
+    }
 
 
     public function createPhoto(Request $request)

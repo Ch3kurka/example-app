@@ -1,82 +1,34 @@
 @extends('kickMain')
 @section('content')
-    @include('adminka.admPages.pagesCont.Gallery.galleryCont')
+    @include('adminka/admPages/pagesCont/Gallery/galleryCont')
     <div class="statbox widget box box-shadow">
         <div class="widget-header">
             <div class="row">
                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
                     <h4>Gallery</h4>
+                        <a href="/editphcat" aria-expanded="false" class="dropdown-toggle">
+                            <button class="btn btn-warning mb-4 mr-2 btn-rounded"> Edit photo and categories
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                     class="feather feather-edit-2">
+                                    <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                                </svg>
+                            </button>
+                        </a>
                 </div>
             </div>
         </div>
         <div class="widget-content widget-content-area">
 
             <div id="demo-test-gallery" class="demo-gallery" data-pswp-uid="1">
-
-                <a class="img-1" href="assets/img/1280x857.jpg" data-size="1600x1068" data-med="assets/img/1280x857.jpg" data-med-size="1024x683" data-author="Samuel Rohl">
-                    <img src="assets/img/1280x857.jpg" alt="image-gallery">
-                    <figure>This is dummy caption. It has been placed here solely to demonstrate the look and feel of finished, typeset text.</figure>
+    @foreach($display as $dis)
+                <a class="img-1"  href="{{asset('/storage/'.$dis['photo_path'])}}" data-size="1600x1068" data-med="assets/img/1280x857.jpg" data-med-size="1024x683" data-author="Samuel Rohl">
+                    <img src="{{asset('/storage/'.$dis['photo_path'])}}" height="450" alt="image-gallery">
+                    <figure></figure>
                 </a>
-
-                <a class="img-2" href="assets/img/1280x857.jpg" data-size="1600x1068" data-med="assets/img/1280x857.jpg" data-med-size="1024x683" data-author="Samuel Rohl">
-                    <img src="assets/img/1280x857.jpg" alt="image-gallery">
-                    <figure>This is dummy caption. It has been placed here solely to demonstrate the look and feel of finished, typeset text.</figure>
-                </a>
-
-                <a class="img-3" href="assets/img/1280x857.jpg" data-size="1600x1067" data-med="assets/img/1280x857.jpg" data-med-size="1024x683" data-author="Michael Hull">
-                    <img src="assets/img/1280x857.jpg" alt="image-gallery">
-                    <figure>Dummy caption. It's Greek to you. Unless, of course, you're Greek, in which case, it really makes no sense.</figure>
-                </a>
-
-                <a class="img-4" href="assets/img/1280x857.jpg" data-size="1600x1600" data-med="assets/img/1280x857.jpg" data-med-size="1024x1024" data-author="Folkert Gorter">
-                    <img src="assets/img/1280x857.jpg" alt="image-gallery">
-                    <figure>This is dummy caption.</figure>
-                </a>
-
-                <a class="img-5" href="assets/img/1280x857.jpg" data-size="1600x1067" data-med="assets/img/1280x857.jpg" data-med-size="1024x683" data-author="Thomas Lefebvre">
-                    <img src="assets/img/1280x857.jpg" alt="image-gallery">
-                    <figure>It's a dummy caption. He who searches for meaning here will be sorely disappointed.</figure>
-                </a>
-
-                <a class="img-6" href="assets/img/1280x857.jpg" data-size="1600x1067" data-med="assets/img/1280x857.jpg" data-med-size="1024x683" data-author="Thomas Lefebvre">
-                    <img src="assets/img/1280x857.jpg" alt="image-gallery">
-                    <figure>It's a dummy caption. He who searches for meaning here will be sorely disappointed.</figure>
-                </a>
+    @endforeach
 
             </div>
-            <div class="style-select">
-                <h5 style="visibility: hidden;">Demo gallery style</h5>
-                <div class="radio mb-4">
-                    <div class="d-flex">
-                        <div class="n-chk">
-                            <label class="new-control new-radio radio-info">
-                                <input type="radio" id="radio-all-controls" class="new-control-input" name="gallery-style" checked>
-                                <span class="new-control-indicator"></span>
-                                <span class="">
-                                                        All controls<br/>
-                                                        <span>caption, share and fullscreen buttons, tap to toggle controls</span>
-                                                    </span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="radio mb-4">
-                    <div class="d-flex">
-                        <div class="n-chk">
-                            <label class="new-control new-radio radio-info">
-                                <input type="radio" id="radio-minimal-black" class="new-control-input" name="gallery-style">
-                                <span class="new-control-indicator"></span>
-                                <span class="">
-                                                        Minimal<br/>
-                                                        <span>no caption, transparent background, tap to close</span>
-                                                    </span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
             <!-- Root element of PhotoSwipe. Must have class pswp. -->
             <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
@@ -129,7 +81,7 @@
                 </div>
             </div>
         </div>
-    <script src="{{asset("plugins/lightbox/photoswipe.min.js")}}"></script>
-    <script src="{{asset("plugins/lightbox/photoswipe-ui-default.min.js")}}"></script>
-    <script src="{{asset("plugins/lightbox/custom-photswipe.js")}}"></script>
+        <script src="{{asset("plugins/lightbox/photoswipe.min.js")}}"></script>
+        <script src="{{asset("plugins/lightbox/photoswipe-ui-default.min.js")}}"></script>
+        <script src="{{asset("plugins/lightbox/custom-photswipe.js")}}"></script>
 @endsection

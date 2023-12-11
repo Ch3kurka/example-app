@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\photo;
 use App\Models\section;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class photoController extends Controller
@@ -41,6 +42,12 @@ class photoController extends Controller
         $create->photo()->sync($categories);
         return redirect('/galleryEdit');
 
+    }
+    public function ShowPhotoInCategory(section $section)
+    { dd($section);
+    $photos = $section -> with('section')->get();
+
+    return view('adminka/admPages/pagesCont/Gallery/showPhAndCat' , ['photos'=>$photos]);
     }
 
 }

@@ -54,6 +54,7 @@ Route::view('/galleryEdit', 'adminka/admPages/pagesCont/Gallery/editS');
 Route::view('/galleryPhoto', 'adminka/admPages/pagesCont/Gallery/createPh');
 Route::view('/photos', 'adminka/admPages/pagesCont/Gallery/allPhoto');
 Route::view('/editphcat', 'adminka/admPages/pagesCont/Gallery/editPhS');
+Route::view('/cat', 'adminka/admPages/pagesCont/Gallery/showPhAndCat');
 
 
 
@@ -78,7 +79,7 @@ Route::get('/galleryPhoto', [photoController::class, 'index']);
 Route::post('/galleryPhoto', [photoController::class, 'createPhoto'])->name('createPhoto');
 Route::get('/photos',[photoController::class, 'showPhoto']);
 Route::get('/editphcat', [photoController::class, 'showCategories']);
-
+Route::get('/cat/{section}/photos', [photoController::class,'ShowPhotoInCategory'])->name('showPhoto');
 /*Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');*/

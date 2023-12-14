@@ -11,6 +11,6 @@ class section extends Model
     {
 
         return $this->belongsToMany(photo::class, 'photos_sections',
-            'photos_id', 'sections_id');
+            'sections_id','photos_id' );
     }
 }

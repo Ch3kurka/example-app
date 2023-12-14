@@ -39,15 +39,15 @@ class photoController extends Controller
 
         $categories = $request->input('categories');
 
-        $create->photo()->sync($categories);
+        $create->section()->sync($categories);
         return redirect('/galleryEdit');
 
     }
-    public function ShowPhotoInCategory(section $section)
-    { dd($section);
-    $photos = $section -> with('section')->get();
-
-    return view('adminka/admPages/pagesCont/Gallery/showPhAndCat' , ['photos'=>$photos]);
+    public function ShowPhotoInCategory($id)
+    {
+        $photos = section::find($id);
+        $photo = $photos->section;
+    return view('adminka/admPages/pagesCont/Gallery/showPhAndCat' , ['photo'=>$photo]);
     }
 
 }

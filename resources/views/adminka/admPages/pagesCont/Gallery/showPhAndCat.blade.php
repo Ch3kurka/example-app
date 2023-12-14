@@ -27,16 +27,13 @@
             </div>
         </div>
         <div class="widget-content widget-content-area">
-
             <div id="demo-test-gallery" class="demo-gallery" data-pswp-uid="1">
-
-                @foreach($photos -> section as $photo)
-
-                    <a class="img-1"  href="{{asset('/storage/'.$photo['photo_path'])}}" data-size="1600x1068" data-med="assets/img/1280x857.jpg" data-med-size="1024x683" data-author="Samuel Rohl">
-                        <img src="{{asset('/storage/'.$photo['photo_path'])}}" height="450" alt="image-gallery">
+            @foreach($photo as $qwe)
+                    <a class="img-1" href="{{asset('/storage/'.$qwe['photo_path'])}}" data-size="1600x1068"
+                       data-med="assets/img/1280x857.jpg" data-med-size="1024x683" data-author="Samuel Rohl">
+                        <img src="{{asset('/storage/'.$qwe['photo_path'])}}" height="400" alt="image-gallery">
                     </a>
-                @endforeach
-
+            @endforeach
             </div>
             <!-- Root element of PhotoSwipe. Must have class pswp. -->
             <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">

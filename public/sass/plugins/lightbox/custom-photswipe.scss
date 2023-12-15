@@ -45,7 +45,33 @@ a.demo-gallery__img--main {
     border-radius: 8px;
   }
 
-  figure {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Определяем ширину колонок и их количество */
+        gap: 20px; /* Задаем отступ между элементами */
+    }
+
+    .gallery-item {
+        display: flex;
+        flex-direction: column; /* Для того, чтобы изображение и кнопка находились друг под другом */
+    }
+
+    .img-container {
+        position: relative;
+        overflow: hidden;
+        /* Дополнительные стили для изображения и контейнера */
+    }
+
+    button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        /* Стили для позиционирования кнопки */
+    }
+
+
+
+    figure {
     display: none;
   }
 }

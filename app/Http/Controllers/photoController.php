@@ -49,5 +49,8 @@ class photoController extends Controller
         $photo = $photos->section;
     return view('adminka/admPages/pagesCont/Gallery/showPhAndCat' , ['photo'=>$photo]);
     }
+    public function detach($id)
+    {
 
+    }
 }

@@ -33,7 +33,7 @@
                         <a class="img-container" href="{{asset('/storage/'.$qwe['photo_path'])}}" data-size="1600x1068"
                            data-med="assets/img/1280x857.jpg" data-med-size="1024x683" data-author="Samuel Rohl">
                             <div>
-                                <form action="{{route('detach', $qwe)}}">
+                                <form action="{{route('detachPhoto')}}">
                                     @csrf
                                     <button class="btn btn-primary mt-2 mb-2 mr-2 m btn-rounded">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"

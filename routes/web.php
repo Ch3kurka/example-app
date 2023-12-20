@@ -80,7 +80,7 @@ Route::post('/galleryPhoto', [photoController::class, 'createPhoto'])->name('cre
 Route::get('/photos',[photoController::class, 'showPhoto']);
 Route::get('/editphcat', [photoController::class, 'showCategories']);
 Route::get('/cat/{section}/photos', [photoController::class,'ShowPhotoInCategory'])->name('showPhoto');
-Route::delete('/cat/{section}/photos', [photoController::class, 'detach'])->name('detach');
+Route::delete('/cat/{delete}/photos', [photoController::class, 'detach'])->name('detachPhoto');
 /*Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');*/

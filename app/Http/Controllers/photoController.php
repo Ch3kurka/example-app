@@ -51,6 +51,7 @@ class photoController extends Controller
     }
     public function detach($id)
     {
-
+    $files = photo::find($id)->sections()->detach();
+    return redirect('/photos' , ['delete'=>$files]);
     }
 }

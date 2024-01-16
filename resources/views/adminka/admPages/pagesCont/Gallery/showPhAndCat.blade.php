@@ -33,7 +33,8 @@
                         <a class="img-container" href="{{asset('/storage/'.$qwe['photo_path'])}}" data-size="1600x1068"
                            data-med="assets/img/1280x857.jpg" data-med-size="1024x683" data-author="Samuel Rohl">
                             <div>
-                                <form action="{{route('detachPhoto')}}">
+
+                                <form  method="POST" action="{{route('detachPhoto', [$qwe['id'], $qwe['pivot']['sections_id']])}}">
                                     @csrf
                                     <button class="btn btn-primary mt-2 mb-2 mr-2 m btn-rounded">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -45,7 +46,7 @@
                                             <line x1="10" y1="11" x2="10" y2="17"></line>
                                             <line x1="14" y1="11" x2="14" y2="17"></line>
                                         </svg>
-                                        Detach
+                                        Detach23423
                                     </button>
                                 </form>
                             </div>
